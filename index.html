@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Backbone calculator app</title>
+  <link rel="stylesheet" href="./css/calculator.css"/>
+</head>
+
+<body>
+  <div id="wrap-calculator">
+    <div class="wrap-header">
+      <h1>Backbone Calendar app-test</h1>
+      <a href="./history.html" id='history-link' target="_blank">history</a>
+    </div>
+    <div id="calculator">
+      <div id="display-panel"></div>
+      <div class="switch-panel">
+        <a class="switch-btn key" id="hex-key">Hex</a>
+        <a class="switch-btn key" id="dec-key">Dec</a>
+        <a class="switch-btn key" id="oct-key">Oct</a>
+        <a class="switch-btn key" id="bin-key">Bin</a>
+        <a class="switch-btn key on-btn">On/Off</a>
+      </div>
+      <div class="keyboard-pannel">
+        <a class="memory-btn key">M+</a>
+        <a class="memory-btn key">M-</a>
+        <a class="memory-btn key">MRC</a>
+        <a class="memory-btn key">+/-</a>
+        <a class="memory-btn key">CE</a>
+        <a class="number-btn key">7</a>
+        <a class="number-btn key">8</a>
+        <a class="number-btn key">9</a>
+        <a class="operation-btn key">%</a>
+        <a class="operation-btn key">√</a>
+        <a class="number-btn key">4</a>
+        <a class="number-btn key">5</a>
+        <a class="number-btn key">6</a>
+        <a class="operation-btn key">*</a>
+        <a class="operation-btn key">/</a>
+        <a class="number-btn key">1</a>
+        <a class="number-btn key">2</a>
+        <a class="number-btn key">3</a>
+        <a class="operation-btn key">+</a>
+        <a class="operation-btn key">-</a>
+        <a class="number-btn key">0</a>
+        <a class="space-btn key"></a>
+        <a class="number-btn key">.</a>
+        <a class="space-btn key"></a>
+        <a class="operation-btn key">=</a>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/template" id="display-template">
+      <div class="wrap-display">
+        <div id="operation-display"><%- first_operand %> <%- operator %> <%- second_operand %> <%- equal %></div>
+        <input type="text" id="result-display" name="result" value="<%= result %>" readonly>
+      </div>
+  </script>
+
+  <script src="./lib/json2.js"></script>
+  <script src="./lib/jquery.js"></script>
+  <script src="./lib/underscore.js"></script>
+  <script src="./lib/backbone.js"></script>
+  <script src="./lib/backbone.localStorage.js"></script>
+  <script src="./js/calculator.js"></script>
+  
+  </body>
+</html>
